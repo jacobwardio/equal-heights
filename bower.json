@@ -17,11 +17,17 @@
       "match",
       "height"
     ],
+    "authors": [
+    "burfield <hello@burfieldcreative.co.uk>"
+    ],
+    "license": "MIT",
     "ignore": [
         "**/.*",
         "index.html",
         "css",
         "js/libs/*",
+        "images",
+        "libs",
         "images/*"
     ],
     "dependencies": {
