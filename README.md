@@ -11,13 +11,13 @@ A simple plugin that sets responsive equal heights by simply adding attributes d
 Group anything that needs an equal height by adding the attribute data-match-height=[groupName].
 It evens works on nested divs etc.
 
-`
+```
 <div class='class-name'>
     <div data-match-height="groupName1"></div>
     <div data-match-height="groupName1"></div>
     <div data-match-height="groupName1"></div>
 </div>
-`
+```
 
 # Legal
 
