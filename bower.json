@@ -1,6 +1,6 @@
 {
     "name": "simple-equal-heights",
-    "version": "0.0.2",
+    "version": "0.0.5",
     "main": "js/simple-equal-heights.min.js",
     "description": "jQuery plugin for equalizing the height or width of your elements",
     "homepage": "https://github.com/BurfieldCreative/equal-heights",
