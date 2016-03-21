@@ -1,0 +1,25 @@
+{
+  "name": "burfield-equal-heights",
+  "main": "burfield-equal-heights.js",
+  "homepage": "https://github.com/BurfieldCreative/equal-heights",
+  "description": "A plugin to set equal heights on multiple divs or anything you like. To add simple include <div class='class-name' data-match-height='groupName1'>",
+  "moduleType": [],
+  "keywords": [
+    "Equal",
+    "heights",
+    "same",
+    "heights",
+    "heights",
+    "burfield",
+    "same",
+    "height",
+    "divs",
+    "match",
+    "height"
+  ],
+  "authors": [
+    "Burfield"
+  ],
+  "license": "MIT",
+  "private": true
+}
