@@ -18,42 +18,26 @@ body{
 	text-align: center;
     max-width: 1200px;
     margin: auto;
+	margin-bottom: 30px;
+	overflow: hidden;
 }
 
 h1{
 	width: 100%;
 	text-align: center;
-	padding-bottom: 40px;
 	color: white;
 	padding-top: 20px;
 	font-size: 30px;
-
-	span{
-		opacity: .5;
-	}
+	margin-bottom: 0;
 }
 
-.row{
-	background-color: white;
-	display: inline-block;
-	width: 30%;
-	margin: 0 1%;
-	vertical-align: top;
-	text-align: left;
-	border-radius: 3px;
-	overflow: hidden;
-	line-height: 22px;
-	border: solid 1px 067264;
-	border-bottom: solid 1px #005234;
-}
-
-.row img {
+h3{
 	width: 100%;
-	height: auto;
-}
-
-.row .bottom-section {
-	padding: 15px;
+	text-align: center;
+	padding-bottom: 20px;
+	color: white;
+	padding-top: 20px;
+	font-size: 20px;
 }
 
 heading {
@@ -65,4 +49,72 @@ heading {
 h2 {
     text-align: center;
     line-height: 28px;
+}
+
+h2.light-color {
+	color: white;
+	margin-bottom: 40px;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.row{
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: left;
+	border-radius: 3px;
+	overflow: hidden;
+	line-height: 22px;
+}
+
+.row img,
+.row2 img {
+	width: 100%;
+	height: auto;
+}
+
+
+
+.row .bottom-section,
+.row2 .bottom-section {
+	padding: 15px;
+}
+
+
+
+.inner {
+	background-color: white;
+	border: solid 1px 067264;
+	border-bottom: solid 1px #005234;
+	margin: 15px;
+}
+
+.row2{
+	display: block;
+	float: left;
+	width: 100%;
+	vertical-align: top;
+	text-align: left;
+	overflow: hidden;
+	line-height: 22px;
+}
+
+
+@media only screen and (min-width: 600px) {
+	.row {
+		width: 50%;
+	}
+	.row2 {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.row {
+		width: 33.3%;
+	}
+	.row2 {
+		width: 25%;
+	}
 }
