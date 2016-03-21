@@ -9,7 +9,7 @@ Download and open index.html to view the [demo](https://github.com/BurfieldCreat
 # How to Use
 
 Group ANYTHING that needs an equal height by adding the attribute data-match-height=[groupName].
-It evens works on nested divs etc. Even works on images (although they get stretched a touch) to view and open index.html from the [demo](https://github.com/BurfieldCreative/equal-heights/archive/master.zip))
+It evens works on nested divs etc. Even works on images (although they get stretched a touch) to view and open index.html from the [demo](https://github.com/BurfieldCreative/equal-heights/archive/master.zip)
 
 ```
 <div class='class-name'>
