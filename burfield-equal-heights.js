@@ -1,6 +1,6 @@
 // http://codepen.io/Lewitje/pen/YybQEP original copy from Lewi Hussay updated to work with multiple divs
 // Equal height - by Burfield www.burfield.co.uk
-// Example usage use data-match-height="groupName"> on anything!!!
+// Example usage use <div class='div-class' data-match-height="groupName1"> on anything!!!
 
 var matchHeight = (function () {
 
