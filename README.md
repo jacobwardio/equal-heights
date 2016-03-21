@@ -15,6 +15,7 @@ It evens works on nested divs etc.
     <div data-match-height="groupName1"></div>
     <div data-match-height="groupName1"></div>
 </div>
+</pre>
 
 # Legal
 
