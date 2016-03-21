@@ -1,25 +1,43 @@
 {
-  "name": "burfield-equal-heights",
-  "main": "burfield-equal-heights.js",
-  "homepage": "https://github.com/BurfieldCreative/equal-heights",
-  "description": "A plugin to set equal heights on multiple divs or anything you like. To add simple include <div class='class-name' data-match-height='groupName1'>",
-  "moduleType": [],
+  "name": "simple-equal-heights",
+  "version": "1.0.0",
+  "description": "jQuery plugin for equalizing the height or width of your elements",
+  "homepage": "http://tsvensen.github.io/equalize.js/",
   "keywords": [
     "Equal",
     "heights",
     "same",
     "heights",
     "heights",
-    "burfield",
+    "simple",
     "same",
     "height",
     "divs",
     "match",
     "height"
   ],
-  "authors": [
-    "Burfield"
+  "author": {
+    "name": "Burfield",
+    "url": "http://burfieldcreative.co.uk"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  }, {
+    "type": "GPLv2",
+    "url": "http://opensource.org/licenses/GPL-2.0"
+  }],
+  "main": [
+    "js/simple-equal-heights.js",
+    "js/simple-equal-heights.min.js"
   ],
-  "license": "MIT",
-  "private": true
+  "dependencies": {
+    "jquery": ">=1.4.x"
+  },
+  "ignore": [
+    "**/.*",
+    "index.html",
+    "css",
+    "js/libs/*"
+  ]
 }
