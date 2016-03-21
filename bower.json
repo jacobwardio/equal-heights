@@ -1,37 +1,34 @@
 {
-  "name": "simple-equal-heights",
-  "version": "1.0.1",
-  "description": "jQuery plugin for equalizing the height or width of your elements",
-  "homepage": "https://github.com/BurfieldCreative/equal-heights",
-  "keywords": [
-    "Equal",
-    "heights",
-    "same",
-    "heights",
-    "heights",
-    "simple",
-    "same",
-    "height",
-    "divs",
-    "match",
-    "height"
-  ],
-  "author": {
-    "name": "Burfield",
-    "url": "http://burfieldcreative.co.uk"
-  },
-  "main": [
-    "js/simple-equal-heights.js",
-    "js/simple-equal-heights.min.js"
-  ],
-  "dependencies": {
-    "jquery": ">=1.4.x"
-  },
-  "ignore": [
-    "**/.*",
-    "index.html",
-    "css",
-    "js/libs/*",
-    "images/*"
-],
+    "name": "simple-equal-heights",
+    "version": "0.0.1",
+    "main": "js/simple-equal-heights.min.js",
+    "description": "jQuery plugin for equalizing the height or width of your elements",
+    "homepage": "https://github.com/BurfieldCreative/equal-heights",
+    "keywords": [
+      "Equal",
+      "heights",
+      "same",
+      "heights",
+      "heights",
+      "simple",
+      "same",
+      "height",
+      "divs",
+      "match",
+      "height"
+    ],
+    "author": [
+      "name": "Burfield",
+      "url": "http://burfieldcreative.co.uk"
+    ],
+    "ignore": [
+        "**/.*",
+        "index.html",
+        "css",
+        "js/libs/*",
+        "images/*"
+    ],
+    "dependencies": {
+        "jquery": ">=1.10.2",
+    },
 }
