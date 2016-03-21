@@ -20,13 +20,6 @@
     "name": "Burfield",
     "url": "http://burfieldcreative.co.uk"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
-  }, {
-    "type": "GPLv2",
-    "url": "http://opensource.org/licenses/GPL-2.0"
-  }],
   "main": [
     "js/simple-equal-heights.js",
     "js/simple-equal-heights.min.js"
@@ -39,6 +32,6 @@
     "index.html",
     "css",
     "js/libs/*",
-    "images/*",
+    "images/*"
   ]
 }
