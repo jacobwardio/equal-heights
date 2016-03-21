@@ -39,5 +39,6 @@
     "index.html",
     "css",
     "js/libs/*"
+    "images/*"
   ]
 }

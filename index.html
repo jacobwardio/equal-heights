@@ -1,1 +1,73 @@
-this is the demo coming shortly
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Simple Equal Heights</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <h1>Simple Equal Heights</h1>
+
+
+    <section class="container">
+
+        <article class="row" data-match-height="rowHeight">
+            <img src="images/image1.jpg"/>
+            <div class="bottom-section">
+            <heading data-match-height="titleHeight">
+                <h2>This is box 1</h2>
+            </heading>
+            <p data-match-height="textHeight">
+                This block is smaller than the last, yet it has the same height as the last.
+            </p>
+        </div>
+
+        </article>
+
+        <article class="row" data-match-height="rowHeight">
+            <img src="images/image2.jpg" />
+            <div class="bottom-section">
+
+
+            <heading data-match-height="titleHeight">
+                <h2>This is box 2 with a slightly longer title</h2>
+            </heading>
+            <p data-match-height="textHeight">
+                This block is smaller has a little more text, yet it has the same height as the last.
+                Also notice how the title above has the same height.
+            </p>
+
+            </div>
+        </article>
+
+        <article class="row" data-match-height="rowHeight">
+            <img src="images/image3.jpg" />
+            <div class="bottom-section">
+            <heading data-match-height="titleHeight">
+                <h2> This is box 3</h2>
+            </heading>
+
+            <p data-match-height="textHeight">
+                This is the text of the largest container.
+                <br/> It will force the height of all the other blocks to match the height of this block.
+                <br/> It even works when you resize your browser!
+            </p>
+        </div>
+
+        </article>
+
+    </section>
+
+    <!--Always load javascript first-->
+    <script src="js/libs/jquery-1.11.0.min.js"></script>
+
+    <script src="js/simple-equal-heights.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,3 +1,68 @@
-body {
-background: #000;
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(to bottom, #060628, #1f525b, #15c3c8);
+	padding: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.container{
+	text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1{
+	width: 100%;
+	text-align: center;
+	padding-bottom: 40px;
+	color: white;
+	padding-top: 20px;
+	font-size: 30px;
+
+	span{
+		opacity: .5;
+	}
+}
+
+.row{
+	background-color: white;
+	display: inline-block;
+	width: 30%;
+	margin: 0 1%;
+	vertical-align: top;
+	text-align: left;
+	border-radius: 3px;
+	overflow: hidden;
+	line-height: 22px;
+	border: solid 1px 067264;
+	border-bottom: solid 1px #005234;
+}
+
+.row img {
+	width: 100%;
+	height: auto;
+}
+
+.row .bottom-section {
+	padding: 15px;
+}
+
+heading {
+    width: 100%;
+    margin: 0 0 15px;
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    line-height: 28px;
 }
