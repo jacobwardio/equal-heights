@@ -2,7 +2,7 @@
   "name": "simple-equal-heights",
   "version": "1.0.0",
   "description": "jQuery plugin for equalizing the height or width of your elements",
-  "homepage": "http://tsvensen.github.io/equalize.js/",
+  "homepage": "https://github.com/BurfieldCreative/equal-heights",
   "keywords": [
     "Equal",
     "heights",

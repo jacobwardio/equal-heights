@@ -1,6 +1,6 @@
 # Simple Equal Heights
 
-Originally sourced from [Equal height by Lewi Hussey](http://codepen.io/Lewitje/pen/YybQEP) and upgraded to work on multiple divs at once.
+Originally sourced from [Equal height by Burfield Hussey](http://codepen.io/Lewitje/pen/YybQEP) and upgraded to work on multiple divs at once.
 A simple plugin that sets responsive equal heights by simply adding attributes directly to the mark up. [download to view the demo »](https://github.com/BurfieldCreative/equal-heights/).
 
 
