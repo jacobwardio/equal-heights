@@ -8,7 +8,7 @@ A set break point has been added so it will only take effect after 600px and up;
 Download and open index.html to view the [demo](https://github.com/BurfieldCreative/equal-heights/archive/master.zip).
 
 
-# How to Use
+## How to Use
 
 Group ANYTHING that needs an equal height by adding the attribute data-match-height=[groupName].
 It evens works on nested divs etc. Even works on images (although they get stretched a touch) to view and open index.html from the [demo](https://github.com/BurfieldCreative/equal-heights/archive/master.zip)
@@ -21,8 +21,22 @@ It evens works on nested divs etc. Even works on images (although they get stret
 </div>
 ```
 
-# Legal
+## Install
 
-Author & copyright (c) 2016: [Burfield](burfieldcreative.co.uk)
+## Install
+[Download](https://github.com/BurfieldCreative/equal-heights/archive/master.zip) and copy the <code>simple-equal-heights.js</code> to a location in your site.
 
-Dual MIT & GPLv2 license
+In your web page:
+```html
+<!-- include jQuery first -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
+<!-- include Simple Equal Heights -->
+<script src="http://path/to/your/copy/of/simple-equal-heights.min.js"></script>
+```
+
+## Bower
+To install simple-equal-heights via Bower:
+```
+bower install simple-equal-heights
+```
