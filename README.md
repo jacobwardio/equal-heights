@@ -3,7 +3,7 @@
 Originally sourced from [Equal height by Burfield Hussey](http://codepen.io/Lewitje/pen/YybQEP) and upgraded to work on multiple divs at once.
 A simple plugin that sets responsive equal heights by simply adding attributes directly to the mark up.
 
-Download and open index.html to view the demo](https://github.com/BurfieldCreative/equal-heights/archive/master.zip).
+Download and open index.html to view the [demo](https://github.com/BurfieldCreative/equal-heights/archive/master.zip).
 
 
 # How to Use
