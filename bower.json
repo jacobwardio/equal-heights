@@ -38,7 +38,7 @@
     "**/.*",
     "index.html",
     "css",
-    "js/libs/*"
+    "js/libs/*",
     "images/*"
   ]
 }
