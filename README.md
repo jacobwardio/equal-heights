@@ -28,15 +28,9 @@ In your web page:
 <script src="http://path/to/your/copy/of/simple-equal-heights.min.js"></script>
 ```
 
-## Bower
-To install simple-equal-heights via Bower:
-```
-bower install simple-equal-heights
-```
-
 ## Changelog
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+This project adheres to [Semantic Versioning](http://semver.org).
 
 ### [Unreleased]
 #### Changed

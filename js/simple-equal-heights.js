@@ -7,72 +7,44 @@ var matchHeight = {
 
   matchHeight: function() {
 
-    // var groupName = [].slice.call(document.querySelectorAll("[data-match-height]"));
-    // var groupHeights = [];
-    //
-    // groupName.forEach(function(groupName, key, groupHeights) {
-    //
-    //   var dataName = groupName;
-    //
-    //   var key = groupName.getAttribute("data-match-height");
-    //
-    //   if (!(groupHeights.hasOwnProperty(key))) {
-    //     groupHeights[key] = [];
-    //   }
-    //
-    //   dataName.style.minHeight = "auto";
-    //
-    //
-    //   dataName.each(function() {
-    //
-    //     groupHeights[key].push(dataName.outerHeight());
-    //
-    //   });
-    //
-    //   return groupHeights.key;
-    //
-    // });
-
-    // var obj = groupHeights;
-    //
-    // for (var index of obj) {
-    //   if (!obj.hasOwnProperty(index)) {
-    //     continue;
-    //   }
-    //
-    //   var minHeight = Math.max.apply(null, obj[index]);
-    //
-    //   if (window.innerWidth() > 600) {
-    //     document.querySelector("data-match-height=\"" + index + "\"").style.minHeight = minHeight;
-    //   } else {
-    //     document.querySelector("data-match-height=\"" + index + "\"").style.minHeight = "auto";
-    //   }
-    //
-    // }
-
-
     var groupName = [].slice.call(document.querySelectorAll("[data-match-height]"));
     var groupHeights = [];
 
-    // for each attr set the min height to auto this makes it responsive
-    $(groupName).each(function(){
+    groupName.forEach(function(groupName, key, groupHeights) {
 
-      var dataName = $(this);
+      var dataName = groupName;
 
-      var key = dataName.data('match-height');
+      var key = groupName.getAttribute("data-match-height");
 
-      //create an array of heights
-      if(!(key in groupHeights)){
+      if (!(groupHeights.hasOwnProperty(key))) {
         groupHeights[key] = [];
       }
 
-      dataName.css('min-height', 'auto');
+      dataName.style.minHeight = "auto";
 
-      dataName.each(function() {
+      console.log(key + dataName.attributes);
 
-        groupHeights[key].push(dataName.outerHeight());
+      // console.log(groupHeights[key]);
 
-      });
+      // key.forEach(function(id, key, offSets) {
+      //   console.log(id);
+      // });
+
+      // for (var k in dataName) {
+      //   groupHeights[key] = groupName.offsetHeight;
+      //         console.log(groupHeights[key]);
+              // console.log(k);
+      // }
+      //
+      //
+
+
+
+
+
+
+
+
 
       return groupHeights.key;
 
@@ -80,18 +52,17 @@ var matchHeight = {
 
     var obj = groupHeights;
 
-    for (var index in obj) {
+    for (var index of obj) {
       if (!obj.hasOwnProperty(index)) {
         continue;
       }
 
       var minHeight = Math.max.apply(null, obj[index]);
 
-      //if window is bigger then 600px set new height else set height to auto
-      if (window.innerWidth > 600) {
-        $('[data-match-height="'+index+'"]').css('min-height', minHeight);
+      if (window.innerWidth() > 600) {
+        document.querySelector("data-match-height=\"" + index + "\"").style.minHeight = minHeight;
       } else {
-        $('[data-match-height="'+index+'"]').css('min-height', 'auto');
+        document.querySelector("data-match-height=\"" + index + "\"").style.minHeight = "auto";
       }
 
     }
