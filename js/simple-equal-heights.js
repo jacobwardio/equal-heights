@@ -26,27 +26,20 @@ var matchHeight = {
         groupHeights[key].push(groupName.offsetHeight);
       }
 
-      console.log(groupHeights[key]);
-      return groupHeights[key];
+      var minHeight = Math.max.apply(null, groupHeights[key]);
+
+      console.log(key);
+      console.log(minHeight);
+
+      if (window.innerWidth > 600) {
+        var foo = document.querySelector("[data-match-height=\"" + key + "\"]").style.minHeight = minHeight;
+        console.log(foo);
+        // document.querySelector("[data-match-height=\"" + key + "\"]").style.minHeight = minHeight;
+      } else {
+        document.querySelector("data-match-height=\"" + key + "\"").style.minHeight = "auto";
+      }
 
     });
-
-    var obj = groupHeights;
-
-    for (var index of obj) {
-      if (!obj.hasOwnProperty(index)) {
-        continue;
-      }
-
-      var minHeight = Math.max.apply(null, obj[index]);
-
-      if (window.innerWidth() > 600) {
-        document.querySelector("data-match-height=\"" + index + "\"").style.minHeight = minHeight;
-      } else {
-        document.querySelector("data-match-height=\"" + index + "\"").style.minHeight = "auto";
-      }
-
-    }
 
   },
 
