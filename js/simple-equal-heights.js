@@ -22,31 +22,12 @@ var matchHeight = {
 
       dataName.style.minHeight = "auto";
 
-      console.log(key + dataName.attributes);
+      for (var i = 0; i < dataName.attributes.length; i++) {
+        groupHeights[key].push(groupName.offsetHeight);
+      }
 
-      // console.log(groupHeights[key]);
-
-      // key.forEach(function(id, key, offSets) {
-      //   console.log(id);
-      // });
-
-      // for (var k in dataName) {
-      //   groupHeights[key] = groupName.offsetHeight;
-      //         console.log(groupHeights[key]);
-              // console.log(k);
-      // }
-      //
-      //
-
-
-
-
-
-
-
-
-
-      return groupHeights.key;
+      console.log(groupHeights[key]);
+      return groupHeights[key];
 
     });
 
