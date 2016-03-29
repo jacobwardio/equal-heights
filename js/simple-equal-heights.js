@@ -26,20 +26,24 @@ var matchHeight = {
         groupHeights[key].push(groupName.offsetHeight);
       }
 
-      var minHeight = Math.max.apply(null, groupHeights[key]);
-
-      console.log(key);
-      console.log(minHeight);
-
-      if (window.innerWidth > 600) {
-        var foo = document.querySelector("[data-match-height=\"" + key + "\"]").style.minHeight = minHeight;
-        console.log(foo);
-        // document.querySelector("[data-match-height=\"" + key + "\"]").style.minHeight = minHeight;
-      } else {
-        document.querySelector("data-match-height=\"" + key + "\"").style.minHeight = "auto";
-      }
+      return groupHeights;
 
     });
+
+  },
+
+  stretchElements: function(groupHeights) {
+
+    console.log(groupHeights);
+
+    // var minHeight = Math.max.apply(null, groupHeights[key]);
+    //
+    // if (window.innerWidth > 600) {
+    //
+    //   var element = document.querySelector('[data-match-height="' + key + '"]');
+    //   element.style.minHeight = minHeight;
+    //   console.log(element.style.minHeight = minHeight);
+    // }
 
   },
 
@@ -52,6 +56,7 @@ var matchHeight = {
   init: function() {
     this.eventListeners();
     this.matchHeight();
+    this.stretchElements();
   }
 
 };
