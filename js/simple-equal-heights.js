@@ -7,14 +7,15 @@ var matchHeight = {
 
   matchHeight: function() {
 
-    var groupName = [].slice.call(document.querySelectorAll("[data-match-height]"));
-    var groupHeights = [];
+    groupHeights = [];
+
+    groupName = [].slice.call(document.querySelectorAll("[data-match-height]"));
 
     groupName.forEach(function(groupName, key, groupHeights) {
 
       var dataName = groupName;
 
-      var key = groupName.getAttribute("data-match-height");
+      var key = dataName.getAttribute("data-match-height");
 
       if (!(groupHeights.hasOwnProperty(key))) {
         groupHeights[key] = [];
@@ -26,37 +27,38 @@ var matchHeight = {
         groupHeights[key].push(groupName.offsetHeight);
       }
 
-      return groupHeights;
+      var minHeight = Math.max.apply(null, groupHeights[key]);
+
+      // console.log(minHeight);
+
+      if (window.innerWidth > 600) {
+
+        var element = document.querySelector('[data-match-height="' + key + '"]');
+        element.style.minHeight = minHeight;
+        console.log(element.style.minHeight);
+      }
 
     });
 
-  },
 
-  stretchElements: function(groupHeights) {
 
-    console.log(groupHeights);
 
-    // var minHeight = Math.max.apply(null, groupHeights[key]);
-    //
-    // if (window.innerWidth > 600) {
-    //
-    //   var element = document.querySelector('[data-match-height="' + key + '"]');
-    //   element.style.minHeight = minHeight;
-    //   console.log(element.style.minHeight = minHeight);
-    // }
+
+
+
+
 
   },
 
   eventListeners: function() {
     // window.onresize = function() {
-    //   matchHeight();
+      this.matchHeight();
     // });
   },
 
   init: function() {
     this.eventListeners();
     this.matchHeight();
-    this.stretchElements();
   }
 
 };
