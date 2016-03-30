@@ -40,6 +40,3 @@ This project adheres to [Semantic Versioning](http://semver.org).
 #### Changed
  - *Refactored* code to remove jQuery dependency - by [jacobwarduk](https://github.com/jacobwarduk)
  - *Refactored* code to be object literal notation - by [jacobwarduk](https://github.com/jacobwarduk)
- - *Replaced* `!(key in groupHeights)` with `!(groupHeights.hasOwnProperty(key)`, as latter is 'correct' way to do it - by [jacobwarduk](https://github.com/jacobwarduk)
- - *Removed* `"use strict";` as no longer required in ECMAScript6 (ES2015) - by [jacobwarduk](https://github.com/jacobwarduk)
- - *Removed* un-descriptive comments - by [jacobwarduk](https://github.com/jacobwarduk)
