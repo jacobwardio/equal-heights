@@ -17,7 +17,7 @@ var matchHeight = {
 
       var key = dataName.getAttribute("data-match-height");
 
-      if (!(groupHeights.hasOwnProperty(key))) {
+      if (!groupHeights[key]) {
         groupHeights[key] = [];
       }
 
@@ -33,9 +33,15 @@ var matchHeight = {
 
       if (window.innerWidth > 600) {
 
+
+        /*
+            JUST NEED TO APPLY VALUES TO min-height CSS PROPERTY
+        */
         var element = document.querySelector('[data-match-height="' + key + '"]');
         element.style.minHeight = minHeight;
-        console.log(element.style.minHeight);
+        // element.setAttribute("style", "min-height: " + minHeight + ";");
+        // console.log(" ");
+        console.log(element); // SHOULD BE OUTPUTTING THE ASSIGNED VALUE - NOT FUCKING "AUTO" !!!!!
       }
 
     });
