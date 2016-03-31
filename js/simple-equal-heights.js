@@ -7,6 +7,7 @@ var matchHeight = {
 
   matchHeight: function() {
 
+
     var groupName = [].slice.call(document.querySelectorAll("[data-match-height]"));
     var groupHeightsAll = [];
 
@@ -24,34 +25,37 @@ var matchHeight = {
         groupHeights[key].push(item.offsetHeight);
       }
 
+
+      //
+      // // THIS NEEDS TO BE MOVED OUT OF THE LOOP SOMEHOW - RETAINING THE ARRAY KEY[VALUE] PAIRS!
+      // var minHeight = Math.max.apply(null, groupHeights[key]);
+      //
+      // if (window.innerWidth > 600) {
+      //   var element = document.querySelector('[data-match-height="' + key + '"]');
+      //     // console.log(element.style);
+      //   element.style.minHeight = minHeight + "px";
+      // }
+      //
+
+
+      console.log(key);
+
       groupHeightsAll = groupHeights;
 
     });
 
-    console.log(groupHeightsAll["p"].offsetHeight);
-
-    for (var index in groupHeightsAll) {
-      // var minHeight = Math.max.apply(Math, groupHeightsAll[index]);
-      // console.log(minHeight);
-      // console.log(index[key]);
-
-      // if (window.innerWidth > 600) {
-      //     var element = document.querySelectorAll('[data-match-height="' + index + '"]');
-      //     element.style.minHeight = minHeight + "px";
-      //   }
-    }
+    // console.log(groupHeightsAll[key]);
 
 
-
-    // groupHeightsAll.forEach(function(item, undefined, groupHeightsAll) {
+    // groupHeightsAll.forEach(function(groupHeightsAll, index) {
     //
-    //   var minHeight = Math.max.apply(Math, groupHeightsAll);
-    //   console.log(minHeight);
-    //
-    //   if (window.innerWidth > 600) {
-    //     var element = document.querySelectorAll('[data-match-height="' + item + '"]');
-    //     element.style.minHeight = minHeight + "px";
-    //   }
+    //   console.log(index + ": " + groupHeightsAll[keyVal] + "\n\n");
+    //   // var minHeight = Math.max.apply(Math, groupHeightsAll[height]);
+    //   //
+    //   // if (window.innerWidth > 600) {
+    //   //   var element = document.querySelectorAll('[data-match-height="' + height + '"]');
+    //   //   element.style.minHeight = minHeight + "px";
+    //   // }
     // });
 
 
