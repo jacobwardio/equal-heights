@@ -7,56 +7,88 @@ var matchHeight = {
 
   matchHeight: function() {
 
+    let groupName = [].slice.call(document.querySelectorAll("[data-match-height]"));
+    var groupHeights = {};
+    var i = 0;
 
-    var groupName = [].slice.call(document.querySelectorAll("[data-match-height]"));
-    var groupHeightsAll = [];
+    for (let item of groupName) {
 
-    groupName.forEach(function(item, undefined, groupHeights) {
-
-      var key = item.getAttribute("data-match-height");
-
-      if (!groupHeights[key]) {
-        groupHeights[key] = [];
-      }
+      var data = item.getAttribute("data-match-height");
 
       item.style.minHeight = "auto";
 
-      for (var i = 0; i < item.attributes.length; i++) {
-        groupHeights[key].push(item.offsetHeight);
+      if (groupHeights.hasOwnProperty(data)) {
+        Object.defineProperty(groupHeights, groupHeights[data], {
+          value: Math.max(groupHeights[data], item.offsetHeight),
+          writable: true,
+          enumerable: true,
+          configurable: true
+        });
+        console.log("has prop");
+      } else {
+        groupHeights[data] = item.offsetHeight;
       }
 
+        // console.log( data, item.offsetHeight);
 
-      //
-      // // THIS NEEDS TO BE MOVED OUT OF THE LOOP SOMEHOW - RETAINING THE ARRAY KEY[VALUE] PAIRS!
-      // var minHeight = Math.max.apply(null, groupHeights[key]);
-      //
-      // if (window.innerWidth > 600) {
-      //   var element = document.querySelector('[data-match-height="' + key + '"]');
-      //     // console.log(element.style);
-      //   element.style.minHeight = minHeight + "px";
-      // }
-      //
+    }
+
+    var groupHeightsAll = groupHeights;
 
 
-      console.log(key);
-
-      groupHeightsAll = groupHeights;
-
-    });
-
-    // console.log(groupHeightsAll[key]);
+    console.log(groupHeightsAll);
 
 
-    // groupHeightsAll.forEach(function(groupHeightsAll, index) {
+
+
+    // for (var index in groupHeightsAll) {
+    //   if (!groupHeightsAll.hasOwnProperty(index)) {
+    //     continue;
+    //   }
     //
-    //   console.log(index + ": " + groupHeightsAll[keyVal] + "\n\n");
-    //   // var minHeight = Math.max.apply(Math, groupHeightsAll[height]);
-    //   //
-    //   // if (window.innerWidth > 600) {
-    //   //   var element = document.querySelectorAll('[data-match-height="' + height + '"]');
-    //   //   element.style.minHeight = minHeight + "px";
-    //   // }
+    //
+    // }
+
+
+    // console.log(groupHeights);
+
+    // console.log(groupHeights.item_3);
+
+
+    // groupName.forEach(function(item, key, groupHeights) {
+    //
+    //   var data = item.getAttribute("data-match-height");
+    //
+    //   item.style.minHeight = "auto";
+    //
+    //   for (var i = 0; i < item.attributes.length; i++) {
+    //     groupHeights[key] = {
+    //       "data": data,
+    //       "height": item.offsetHeight
+    //     }
+    //   }
+    //
+    //   groupHeightsAll = groupHeights;
+    //
+    //   return groupHeights[key];
+    //
     // });
+
+
+
+    // for (var i = 0; i < groupHeightsAll.length; i++) {
+    //   // console.log(groupHeightsAll[i].data);
+    //   // console.log(groupHeightsAll[i].height);
+    //
+    //   var minHeight = groupHeightsAll[i].height; // NEED TO GET THE MAX HEIGHT FOR EACH .data IN HERE!!!
+    //
+    //   // console.log(groupHeightsAll);
+    //
+    //   if (window.innerWidth > 600) {
+    //     var element = document.querySelector('[data-match-height="' + groupHeightsAll[i].data + '"]');
+    //     element.style.minHeight = minHeight + "px";
+    //   }
+    // }
 
 
   },
