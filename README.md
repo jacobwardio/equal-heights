@@ -1,4 +1,4 @@
-# Simple Equal Heights (No jQuery!)
+# [WIP] Simple Equal Heights (No jQuery!)
 Originally sourced from [Equal height by Lewi Hussey](http://codepen.io/Lewitje/pen/YybQEP) and upgraded to work on multiple divs at once.
 A simple plugin that sets responsive equal heights by simply adding attributes directly to the mark up.
 
@@ -27,6 +27,9 @@ In your web page:
 <!-- include Simple Equal Heights -->
 <script src="http://path/to/your/copy/of/simple-equal-heights.min.js"></script>
 ```
+
+## To do
+ -
 
 ## Changelog
 All notable changes to this project will be documented in this file.

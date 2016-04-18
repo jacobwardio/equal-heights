@@ -7,94 +7,55 @@ var matchHeight = {
 
   matchHeight: function() {
 
-    let groupName = [].slice.call(document.querySelectorAll("[data-match-height]"));
+    var groupName = Array.prototype.slice.call(document.querySelectorAll("[data-match-height]"));
     var groupHeights = {};
-    var i = 0;
+    var groupHeightsMax = {};
 
-    for (let item of groupName) {
+    for (var item of groupName) {
 
       var data = item.getAttribute("data-match-height");
 
       item.style.minHeight = "auto";
 
       if (groupHeights.hasOwnProperty(data)) {
-        Object.defineProperty(groupHeights, groupHeights[data], {
+        Object.defineProperty(groupHeightsMax, groupHeights[data], {
           value: Math.max(groupHeights[data], item.offsetHeight),
+          configurable: true,
           writable: true,
-          enumerable: true,
-          configurable: true
+          enumerable: true
         });
-        console.log("has prop");
       } else {
-        groupHeights[data] = item.offsetHeight;
+        groupHeightsMax[data] = item.offsetHeight;
       }
-
-        // console.log( data, item.offsetHeight);
-
     }
 
-    var groupHeightsAll = groupHeights;
+    var groupHeightsAll = groupHeightsMax;
 
 
-    console.log(groupHeightsAll);
+    /*
+      TO DO:
+      For some reason groupHeightsAll is not iterable, despite all it's properties being set to `enumerable: true`.
+      This seems like a reasonable alternative to a `for` loop, given this situation.
+    */
+
+    Object.getOwnPropertyNames(groupHeightsAll).forEach(function(v) {
+      // console.log(v + ": " + Object.getOwnPropertyDescriptor(groupHeightsAll, v).value);
 
 
+      var elementsToChange = document.querySelectorAll("[data-match-height='" + v + "']");
+
+      for (var i = 0; i < elementsToChange.length; i++) {
+        elementsToChange[i].style.height = Object.getOwnPropertyDescriptor(groupHeightsAll, v).value + "px";
+        console.log(v, elementsToChange[i].style.height);
+      }
 
 
-    // for (var index in groupHeightsAll) {
-    //   if (!groupHeightsAll.hasOwnProperty(index)) {
-    //     continue;
-    //   }
-    //
-    //
-    // }
-
-
-    // console.log(groupHeights);
-
-    // console.log(groupHeights.item_3);
-
-
-    // groupName.forEach(function(item, key, groupHeights) {
-    //
-    //   var data = item.getAttribute("data-match-height");
-    //
-    //   item.style.minHeight = "auto";
-    //
-    //   for (var i = 0; i < item.attributes.length; i++) {
-    //     groupHeights[key] = {
-    //       "data": data,
-    //       "height": item.offsetHeight
-    //     }
-    //   }
-    //
-    //   groupHeightsAll = groupHeights;
-    //
-    //   return groupHeights[key];
-    //
-    // });
-
-
-
-    // for (var i = 0; i < groupHeightsAll.length; i++) {
-    //   // console.log(groupHeightsAll[i].data);
-    //   // console.log(groupHeightsAll[i].height);
-    //
-    //   var minHeight = groupHeightsAll[i].height; // NEED TO GET THE MAX HEIGHT FOR EACH .data IN HERE!!!
-    //
-    //   // console.log(groupHeightsAll);
-    //
-    //   if (window.innerWidth > 600) {
-    //     var element = document.querySelector('[data-match-height="' + groupHeightsAll[i].data + '"]');
-    //     element.style.minHeight = minHeight + "px";
-    //   }
-    // }
-
+    });
 
   },
 
   eventListeners: function() {
-    window.onresize = this.matchHeight();
+    // window.onresize = this.matchHeight();
   },
 
   init: function() {
