@@ -10,12 +10,9 @@ var matchHeight = {
     var groupName = Array.prototype.slice.call(document.querySelectorAll("[data-match-height]"));
     var groupHeights = {};
 
-    // groupName.reverse();
-
     for (var item of groupName) {
 
       var data = item.getAttribute("data-match-height");
-      var itemHeight = "";
 
       item.style.minHeight = "auto";
 
@@ -32,13 +29,6 @@ var matchHeight = {
     }
 
     var groupHeightsMax = groupHeights;
-
-
-    /*
-      TO DO:
-      For some reason `groupHeightsMax` is not iterable, despite all it's properties being set to `enumerable: true`.
-      This seems like a reasonable alternative to a `for` loop, given this situation.
-    */
 
     Object.getOwnPropertyNames(groupHeightsMax).forEach(function(value) {
 
@@ -58,7 +48,6 @@ var matchHeight = {
     this.eventListeners();
     this.matchHeight();
   }
-
 };
 
 document.addEventListener("DOMContentLoaded", function() {
