@@ -24,12 +24,12 @@ It evens works on nested divs etc. Even works on images (although they get stret
 ```
 
 ## Install
-[Download](https://github.com/BurfieldCreative/equal-heights/archive/master.zip) and copy the `simple-equal-heights.js` to a location in your site.
+Copy the `simple-equal-heights.js` from the `src` directory to your scripts directory for your site.
 
 In your web page:
 ```html
 <!-- include Simple Equal Heights -->
-<script src="http://path/to/your/copy/of/simple-equal-heights.min.js"></script>
+<script src="http://path/to/your/copy/of/simple-equal-heights.js"></script>
 ```
 
 ## To do
