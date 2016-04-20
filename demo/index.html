@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Equal Heights (No jQuery)</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400,800" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <h1>Simple Equal Heights (No jQuery)</h1>
+  <h3>Responsive equal heights from 600px and up</h3>
+
+
+  <section class="container">
+
+    <h2 class="light-color">3 columns each with a range of equal heights </br>being set on outer height, title, text and the image (Although the image is being stretched)</h2>
+    <h3>BEFORE</h3>
+    <article class="row">
+
+      <div class="inner">
+
+        <img src="images/image1.jpg" />
+
+        <div class="bottom-section">
+          <heading>
+            <h2>This is box 1 (no group)</h2>
+          </heading>
+          <p>
+            This block is smaller than the last, yet it has the same height as the last.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="row">
+
+      <div class="inner">
+
+        <img src="images/image6.jpg" />
+
+        <div class="bottom-section">
+          <heading>
+            <h2>This is box 2 (no group)</h2>
+          </heading>
+          <p>
+            This block is smaller has a little more text, yet it has the same height as the last. </br>Also notice how the title above has the same height.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="row">
+
+      <div class="inner">
+
+        <img src="images/image4.jpg">
+
+        <div class="bottom-section">
+          <heading>
+            <h2>This is box 3 (no group)</h2>
+          </heading>
+          <p>
+            This is the text of the largest container.
+            <br/> It will force the height of all the other blocks to match the height of this block.
+            <br/> It even works when you resize your browser!
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <section class="container">
+    <h3>AFTER</h3>
+    <article class="row">
+
+      <div class="inner" data-match-height="rowHeight">
+
+        <img src="images/image1.jpg" data-match-height="imageHeight" />
+
+        <div class="bottom-section">
+          <heading data-match-height="titleHeight">
+            <h2>This is box 1 (group 1)</h2>
+          </heading>
+          <p data-match-height="textHeight">
+            This block is smaller than the last, yet it has the same height as the last.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="row">
+
+      <div class="inner" data-match-height="rowHeight">
+
+        <img src="images/image6.jpg" data-match-height="imageHeight" />
+
+        <div class="bottom-section">
+          <heading data-match-height="titleHeight">
+            <h2>This is box 2 (group 1)</h2>
+          </heading>
+          <p data-match-height="textHeight">
+            This block is smaller has a little more text, yet it has the same height as the last. </br>Also notice how the title above has the same height.<br />This block is smaller has a little more text, yet it has the same height as the last. </br>Also notice how the title above has the same height.<br />This block is smaller has a little more text, yet it has the same height as the last.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="row">
+
+      <div class="inner" data-match-height="rowHeight">
+
+        <img src="images/image4.jpg" data-match-height="imageHeight" />
+
+        <div class="bottom-section">
+          <heading data-match-height="titleHeight">
+            <h2>This is box 3 (group 1)</h2>
+          </heading>
+          <p data-match-height="textHeight">
+            This is the text of the largest container.
+            <br/> It will force the height of all the other blocks to match the height of this block.
+            <br/> It even works when you resize your browser!This block is smaller has a little more text, yet it has the same height as the last. </br>Also notice how the title above has the same height.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <section class="container">
+    <h2 class="light-color">4 columns each with a range of equal heights </br>being set on outer height, title, text and the image (Although the image is being stretched)</h2>
+    <article class="row2">
+
+      <div class="inner" data-match-height="rowHeight_2">
+
+        <img src="images/image5.jpg" data-match-height="imageHeight2" />
+
+        <div class="bottom-section">
+          <heading data-match-height="titleHeight_2">
+            <h2>Box 1 (group 2)</h2>
+          </heading>
+          <p data-match-height="textHeight_2">
+            This block is smaller than the last, yet it has the same height as the last.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="row2">
+
+      <div class="inner" data-match-height="rowHeight_2">
+
+        <img src="images/image6.jpg" data-match-height="imageHeight2" />
+
+        <div class="bottom-section">
+          <heading data-match-height="titleHeight_2">
+            <h2>This is box 2 has a longer title (group 2)</h2>
+          </heading>
+          <p data-match-height="textHeight_2">
+            This block is smaller has a little more text, yet it has the same height as the last. Also notice how the title above has the same height.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="row2">
+
+      <div class="inner" data-match-height="rowHeight_2">
+
+        <img src="images/image1.jpg" data-match-height="imageHeight2" />
+
+        <div class="bottom-section">
+          <heading data-match-height="titleHeight_2">
+            <h2>Box 3 (group 2)</h2>
+          </heading>
+          <p data-match-height="textHeight_2">
+            This is the text of the largest container.
+            <br/> It will force the height of all the other blocks to match the height of this block.
+            <br/> It even works when you resize your browser!
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="row2">
+
+      <div class="inner" data-match-height="rowHeight_2">
+
+        <img src="images/image2.jpg" data-match-height="imageHeight2" />
+
+        <div class="bottom-section">
+          <heading data-match-height="titleHeight_2">
+            <h2>Box 4 (group 2)</h2>
+          </heading>
+          <p data-match-height="textHeight_2">
+            If it has loads of text!!!!</br>
+            Aenean feugiat aliquam posuere. Curabitur placerat ultrices urna. Donec fermentum quis nibh finibus dignissim. Duis lacinia odio ac justo rhoncus, et volutpat quam hendrerit. Duis sit amet libero auctor, consequat lacus id, tincidunt elit.Aenean feugiat aliquam posuere. Curabitur placerat ultrices urna. Donec fermentum quis nibh finibus dignissim. Duis lacinia odio ac justo rhoncus, et volutpat quam hendrerit. Duis sit amet libero auctor, consequat lacus id, tincidunt elit.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="row2">
+
+        <div class="inner" data-match-height="rowHeight_2">
+
+          <img src="images/image3.jpg" data-match-height="imageHeight2" />
+
+          <div class="bottom-section">
+            <heading data-match-height="titleHeight_2">
+              <h2>Box 5 (group 2)</h2>
+            </heading>
+            <p data-match-height="textHeight_2">
+              This block is smaller than the last, yet it has the same height as the last.
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="row2">
+
+        <div class="inner" data-match-height="rowHeight_2">
+
+          <img src="images/image4.jpg" data-match-height="imageHeight2" />
+
+          <div class="bottom-section">
+            <heading data-match-height="titleHeight_2">
+              <h2>Box 6 (group 2)</h2>
+            </heading>
+            <p data-match-height="textHeight_2">
+              suscipit, feugiat ante a, ultricies turpis. Duis vestibulum vitae lacus vitae ultricies. Aliquam consectetur sit amet nibh faucibus
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="row2">
+
+        <div class="inner" data-match-height="rowHeight_2">
+
+          <img src="images/image5.jpg" data-match-height="imageHeight2" />
+
+          <div class="bottom-section">
+            <heading data-match-height="titleHeight_2">
+              <h2>Box 7 (group 2)</h2>
+            </heading>
+            <p data-match-height="textHeight_2">
+              issim. Duis lacinia odio ac justo rhoncus, et volutpat quam hendrerit. Duis sit amet libero auctor, consequat lacus id, tincidunt elit.
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="row2">
+
+        <div class="inner" data-match-height="rowHeight_2">
+
+          <img src="images/image6.jpg" data-match-height="imageHeight2" />
+
+          <div class="bottom-section">
+            <heading data-match-height="titleHeight_2">
+              <h2>Box 8 (group 2)</h2>
+            </heading>
+            <p data-match-height="textHeight_2">
+              If it has loads of text!!!!</br>
+              Aenean feugiat aliquam posuere. Curabitur dignissim. Duis lacinia odio ac justo rhoncus, et volutpat quam hendrerit. Duis sit amet libero auctor, consequat lacus id, tincidunt elit.
+            </p>
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <script src="js/simple-equal-heights.js"></script>
+
+
+    </body>
+
+    </html>
