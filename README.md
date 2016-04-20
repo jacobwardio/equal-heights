@@ -1,17 +1,21 @@
 # [WIP] Simple Equal Heights (No jQuery!)
-Originally sourced from [Equal height by Lewi Hussey](http://codepen.io/Lewitje/pen/YybQEP) and upgraded to work on multiple divs at once.
-A simple plugin that sets responsive equal heights by simply adding attributes directly to the mark up.
 
-A set break point has been added so it will only take effect after 600px and up;
+A simple plugin that sets responsive equal heights to block level elements by simply adding attributes directly to the mark up.
 
-Download and open index.html to view the [demo](https://github.com/BurfieldCreative/equal-heights/archive/master.zip).
+View the demo on [CodePen]().
+
+Original plugin sourced from [Equal height by Lewi Hussey](http://codepen.io/Lewitje/pen/YybQEP).
+
+Upgraded to work on multiple divs at once by [stevesnow100](https://github.com/stevesnow100).
+
+Refactored to vanilla JavaScript and remove jQuery dependency by [jacobwarduk](https://github.com/jacobwarduk).
 
 
 ## How to Use
 Group ANYTHING that needs an equal height by adding the attribute data-match-height=[groupName].
-It evens works on nested divs etc. Even works on images (although they get stretched a touch) to view and open index.html from the [demo](https://github.com/BurfieldCreative/equal-heights/archive/master.zip)
+It evens works on nested divs etc. Even works on images (although they get stretched a touch).
 
-```
+```html
 <div class='class-name'>
     <div data-match-height="groupName1"></div>
     <div data-match-height="groupName1"></div>
@@ -37,9 +41,9 @@ This project adheres to [Semantic Versioning](http://semver.org).
 
 ### [Unreleased]
 #### Changed
- - Refactored code to ECMAScript6 (ES2015) - by [jacobwarduk](https://github.com/jacobwarduk)
+ - *Refactored* code to ECMAScript6 (ES2015) - by [jacobwarduk](https://github.com/jacobwarduk)
 
-### [0.0.6]() - 2016-03-22
+### [0.1.0]() - 2016-03-22
 #### Changed
  - *Refactored* code to remove jQuery dependency - by [jacobwarduk](https://github.com/jacobwarduk)
  - *Refactored* code to be object literal notation - by [jacobwarduk](https://github.com/jacobwarduk)
