@@ -16,7 +16,7 @@ Group ANYTHING that needs an equal height by adding the attribute data-match-hei
 It evens works on nested divs etc. Even works on images (although they get stretched a touch).
 
 ```html
-<div class='class-name'>
+<div>
     <div data-match-height="groupName1"></div>
     <div data-match-height="groupName1"></div>
     <div data-match-height="groupName1"></div>
