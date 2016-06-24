@@ -1,8 +1,8 @@
-# [WIP] Simple Equal Heights (No jQuery!)
+# JS Equal Heights Plugin (No jQuery deps)
 
 A simple plugin that sets responsive equal heights to block level elements by simply adding attributes directly to the mark up.
 
-View the demo on [CodePen]().
+View the demo on [CodePen](http://codepen.io/jacobwarduk/pen/pbEZav).
 
 Original plugin sourced from [Equal height by Lewi Hussey](http://codepen.io/Lewitje/pen/YybQEP).
 
