@@ -5,7 +5,7 @@
 
 var matchHeight = {
 
-  matchHeight: function() {
+  match: function() {
 
     var groupName = Array.prototype.slice.call(document.querySelectorAll("[data-match-height]"));
     var groupHeights = {};
@@ -41,15 +41,18 @@ var matchHeight = {
   },
 
   eventListeners: function() {
-    window.onresize = this.matchHeight();
+    window.addEventListener("resize", function() {
+			matchHeight.match()
+		});
   },
-
+		
   init: function() {
     this.eventListeners();
-    this.matchHeight();
+    this.match();
   }
 };
 
+// Initialising on DOM load
 document.addEventListener("DOMContentLoaded", function() {
   matchHeight.init();
 });
