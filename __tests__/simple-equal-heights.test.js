@@ -12,7 +12,7 @@ beforeEach(() => {
   });
 });
 
-it("It correcty sets the object's height", async () => {
+it("It correctly sets the object's height", async () => {
   let heights = await nightmare
     .goto(`file://${pathToFile}`)
     .inject('js', 'src/simple-equal-heights.js')
