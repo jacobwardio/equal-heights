@@ -1,6 +1,6 @@
 {
   "name": "equal-heights",
-  "version": "0.1.0",
+  "version": "0.0.6",
   "description": "A simple plugin that sets responsive equal heights to block level elements by simply adding attributes directly to the mark up.",
   "main": "src/simple-equal-heights.js",
   "repository": "git@github.com:juniorgarcia/equal-heights.git",
