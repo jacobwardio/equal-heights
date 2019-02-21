@@ -32,10 +32,6 @@ In your web page:
 <script src="http://path/to/your/copy/of/simple-equal-heights.js"></script>
 ```
 
-## To do
-
--
-
 ## Changelog
 
 All notable changes to this project will be documented in this file.
