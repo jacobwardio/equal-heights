@@ -5,11 +5,7 @@ const pathToFile = path.resolve('./src/baseDOM.html');
 let nightmare;
 
 beforeEach(() => {
-  nightmare = new Nightmare({
-    dock: true,
-    openDevTools: true,
-    show: true
-  });
+  nightmare = Nightmare();
 });
 
 it("It correctly sets the object's height", async () => {
