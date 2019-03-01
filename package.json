@@ -1,0 +1,38 @@
+{
+  "name": "equal-heights",
+  "version": "0.0.6",
+  "description": "A simple plugin that sets responsive equal heights to block level elements by simply adding attributes directly to the mark up.",
+  "main": "src/simple-equal-heights.js",
+  "repository": "git@github.com:juniorgarcia/equal-heights.git",
+  "author": "Júnior Garcia <itamarjr91@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@ampproject/rollup-plugin-closure-compiler": "^0.8.5",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babel-jest": "^24.1.0",
+    "husky": "^1.3.1",
+    "jest": "^24.1.0",
+    "minimist": "^1.2.0",
+    "nightmare": "^3.0.1",
+    "prettier": "1.16.4",
+    "pretty-quick": "^1.10.0",
+    "rollup": "^1.2.2",
+    "rollup-plugin-babel-minify": "^7.0.0",
+    "rollup-plugin-progress": "^1.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "build:development": "rollup --config",
+    "build:production": "rollup --config --production"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "engines": {
+    "node": ">= 10.13"
+  },
+  "dependencies": {}
+}
